@@ -10,6 +10,7 @@ deepspeed --num_gpus=4 --master_port $MASTER_PORT main.py \
     --test_file AdvertiseGen/dev.json \
     --prompt_column content \
     --response_column summary \
+    --history_column history \
     --overwrite_cache \
     --model_name_or_path THUDM/chatglm-6b \
     --output_dir ./output/adgen-chatglm-6b-ft-$LR \
